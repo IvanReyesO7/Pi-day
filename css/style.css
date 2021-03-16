@@ -5,17 +5,17 @@
 #hidden-div{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 6px;
 }
 
-// Smallest device
+
 @media (min-width: 100px) and (max-width: 575px) {
   #hidden-div {
     grid-template-columns: 1fr;
   }
 }
 
-// Small devices (landscape phones, 576px and up)
+
 @media (min-width: 576px) {
     #hidden-div {
         grid-template-columns: 1fr;
