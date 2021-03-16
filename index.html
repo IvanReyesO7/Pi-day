@@ -42,12 +42,26 @@
   <p>We can calculate the distance from 0 to our point, if this distance is less than r then we can conclude that the point landed within the borders of the cirlce, else, it landed outside of it.</p>
   <p>
     \[{d} = {\sqrt{x^2 + y^2}}.\]
-</p>
+  </p>
+  <!--CODE FOR DISTANCE-->
+  <div>
+    <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">const</span> insideOrOutside <span style="color: #333333">=</span> (coord) <span style="color: #333333">=&gt;</span> {
+  <span style="color: #008800; font-weight: bold">const</span> d <span style="color: #333333">=</span> <span style="color: #007020">Math</span>.sqrt(coord[<span style="color: #0000DD; font-weight: bold">0</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">+</span> coord[<span style="color: #0000DD; font-weight: bold">1</span>]<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span> );
+  <span style="color: #008800; font-weight: bold">if</span> (d <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">1</span>){
+    <span style="color: #008800; font-weight: bold">return</span> <span style="background-color: #fff0f0">&quot;Outside&quot;</span>
+  } <span style="color: #008800; font-weight: bold">else</span> {
+    <span style="color: #008800; font-weight: bold">return</span> <span style="background-color: #fff0f0">&quot;Inside&quot;</span>
+  }
+};
+</pre></div>
+
+  </div>
+  <p id="answer2"></p>
   <p>Now that our function works lets try to generate a loop and see how close we can get to π</p>
+  <button id="start" type="button" class="btn btn-primary">Start!</button>
   <div class ="d-flex">
     <div id="graph"><!-- Plotly chart will be drawn inside this DIV --></div>
     <div>
-      <button id="start" type="button" class="btn btn-primary">Start!</button>
       <p>Total of points</p>
       
       <p>points inside de circle</p>
