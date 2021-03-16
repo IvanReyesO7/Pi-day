@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+h2{
+  font-family: 'DotGothic16', sans-serif;
+}
 .navbar{
     background-color: black;
     height: 100px !important;
