@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="navbar">
+  </div>
+  <div class="container mt-3">
+    <h2>March 14th, Happy PI day!</h2>
+    <p>To celebrate this important day for the Mathematical and engineering community let's generate an approximation of PI using geometry and a random coordinate generator.</p>
+    <p>let's imagine a square that contains a circle of radius r, if we throw some darts randomly we can count the darts that landed inside the square (All of them) and the darts that landed inside the circle.</p>
+    <p>The ratio between the total of points that landed in the circle and the total number of points would be very close to the ratio between the area of the sqare and the are of the circle </p>
+    <p>Something like this</p>
+    <p>
+      \[{Number Of Points In Circle \over Number Of Points} ≈ {πr^2 \over (2r)^2 }.\]
+    </p>
+    <p>Assuming that the radius of our circle is 1, if we try to assolate π we will have the following equation </p>
+    <p>
+        \[{π} ≈ {4}{Number Of Points In Circle \over Number Of Points}.\]
+    </p>
+    <p>Cool! Now that we have our math sorted out, we can go ahead and create a function that generates random coordiantes between [0, 0] and [1, 1]</p>
+    <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">const</span> randomCoor <span style="color: #333333">=</span> () <span style="color: #333333">=&gt;</span>{
+  <span style="color: #008800; font-weight: bold">const</span> coord <span style="color: #333333">=</span> []
+  coord.push([<span style="color: #007020">Math</span>.random(), <span style="color: #007020">Math</span>.random()])
+};
+</pre></div>
+
+    <div id="graph"><!-- Plotly chart will be drawn inside this DIV --></div>
+  </div>
+</body>
+<script src="lib/index.js"></script>
+</html>
