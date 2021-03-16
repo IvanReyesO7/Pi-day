@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
+    <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-    <title>Document</title>
+    </script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Pi Generator </title>
 </head>
 <body>
   <div class="navbar">
+    <div class="logo d-flex align-items-center pl-3">
+      <img src="lib/pi.png" alt="">
+      <h1>Generator</h1>
+    </div>
   </div>
-  <div class="container mt-3">
-    <h2>March 14th, Happy PI day!</h2>
+  <div class="example1">
+    <h3 class="mb-1"> 3.14159265358979323846264338327950288419716939937510582097494459</h3>
+  </div>
+  <div class="container mt-3" style="max-width: 900px;">
+    <h2 class="text-center">March 14th, Happy PI day!  🎉</h2>
     <p>To celebrate this important day for the Mathematical and engineering community let's generate an approximation of PI using geometry and a random coordinate generator.</p>
-    <p>let's imagine a square that contains a circle of radius r, if we throw some darts randomly we can count the darts that landed inside the square (All of them) and the darts that landed inside the circle.</p>
-    <p>The ratio between the total of points that landed in the circle and the total number of points would be very close to the ratio between the area of the sqare and the are of the circle </p>
-    <p>Something like this</p>
+    <div class = "d-flex mb-3 align-items-center">
+      <img src="lib/circle.jpeg" alt="" style="width: 130px; height: 130px;">
+      <div style="margin-left: 16px;">
+        <p>let's imagine a square that contains a circle of radius r, if we throw some darts randomly we can count the darts that landed inside the square (All of them) and the darts that landed inside the circle.</p>
+        <p>The ratio between the total of points that landed in the circle and the total number of points would be very close to the ratio between the area of the square and the ares of the circle </p>
+      </div>
+    </div>
+    <p><b>Something like this:</b></p>
     <p>
       \[{Number Of Points In Circle \over Number Of Points} ≈ {πr^2 \over (2r)^2 }.\]
     </p>
@@ -34,12 +48,12 @@
   <span style="color: #008800; font-weight: bold">return</span> [<span style="color: #007020">Math</span>.random(), <span style="color: #007020">Math</span>.random()];
 };
 </pre></div>
-  <div class="d-flex">
-    <button id="try" type="button" class="btn btn-primary">Try it out!</button>
-    <p id='answer'></p>
+  <div class="d-flex align-items-center ">
+    <button id="try" type="button" class="btn btn-primary my-2">Try it out!</button>
+    <p id="answer" class="my-2 ml-3" style="margin-left: 6px;"></p>
   </div>
-  <p>You might be wondering, how can we know if this random point is landing inside our outside the circle? Well, we can ask that question to our old friend Pythagoras.</p>
-  <p>We can calculate the distance from 0 to our point, if this distance is less than r then we can conclude that the point landed within the borders of the cirlce, else, it landed outside of it.</p>
+  <p>You might be wondering, how can we know if this random point is landing inside or outside the circle? Well, we can ask that question to our old friend Pythagoras.</p>
+  <p>We can calculate the distance from 0 to our point, if this distance is less than r then we can conclude that the point landed within the borders of the circle, else it landed outside of it.</p>
   <p>
     \[{d} = {\sqrt{x^2 + y^2}}.\]
   </p>
@@ -59,17 +73,25 @@
   <p id="answer2"></p>
   <p>Now that our function works lets try to generate a loop and see how close we can get to π</p>
   <button id="start" type="button" class="btn btn-primary">Start!</button>
-  <div class ="d-flex">
+  <div id="hidden-div"class ="container d-flex align-items-center " style="height: 0px; overflow: hidden;border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;">
     <div id="graph"><!-- Plotly chart will be drawn inside this DIV --></div>
     <div>
-      <p>Total of points</p>
+      <p><b>Total of points</b></p>
       <p id="total"></p>
-      <p>points inside de circle</p>
+      <p><b>points inside de circle</b></p>
+      <p><i class="fab fa-github"></i></p>
       <p id="total-circle"></p>
-      <p>Our approximation to PI</p>
+      <p><b>Our approximation to PI</b></p>
       <p id="PI"></p>
+      <button id="stahp" type="button" class="btn btn-outline-danger ">Make it stop!</button>
     </div>
   </div>
+</div>
+<div class="footer mt-3">
+  <div class="footer-links">
+    <p style="font-size:15px;color: white;">IvanReyesO7</p>
+  </div>
+</div>
 </body>
 <script src="lib/index.js"></script>
 </html>
