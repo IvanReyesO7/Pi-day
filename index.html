@@ -31,12 +31,21 @@
     </p>
     <p>Cool! Now that we have our math sorted out, we can go ahead and create a function that generates random coordiantes between [0, 0] and [1, 1]</p>
     <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">const</span> randomCoor <span style="color: #333333">=</span> () <span style="color: #333333">=&gt;</span>{
-  <span style="color: #008800; font-weight: bold">const</span> coord <span style="color: #333333">=</span> []
-  coord.push([<span style="color: #007020">Math</span>.random(), <span style="color: #007020">Math</span>.random()])
+  <span style="color: #008800; font-weight: bold">return</span> [<span style="color: #007020">Math</span>.random(), <span style="color: #007020">Math</span>.random()];
 };
 </pre></div>
-
+  <div class="d-flex">
+    <button id="try" type="button" class="btn btn-primary">Try it out!</button>
+    <p id='answer'></p>
+  </div>
+  <p>Now that our function works lets try to generate a loop and see how close we can get to π</p>
+  <div class ="d-flex">
     <div id="graph"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div>
+      <p>Total of points</p>
+      <p>points inside de circle</p>
+      <p>Whatever</p>
+    </div>
   </div>
 </body>
 <script src="lib/index.js"></script>
