@@ -1,3 +1,17 @@
 @import "components/navbar.css";
 @import "components/footer.css";
 @import "components/banner.css";
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  #graph {
+    width: 100%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #graph {
+        width: 100%;
+    }
+}
